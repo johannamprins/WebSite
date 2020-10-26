@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ApplicationCore.Entities.Customer
+namespace ApplicationCore.Entities.Basket
 {
-    class Customer
+    class Product
     {
     }
 }

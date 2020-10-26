@@ -4,7 +4,10 @@ using System.Text;
 
 namespace ApplicationCore.Entities.Basket
 {
-    class ShoppingCartItem
+    public class ShoppingCartItem
     {
+        private int itemID { get; set; }
+        public int itemQuantity { get; set; }
+        public int itemPrice { get;set, }
     }
 }
