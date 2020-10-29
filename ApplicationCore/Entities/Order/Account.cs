@@ -6,5 +6,6 @@ namespace ApplicationCore.Entities.Order
 {
     class Account
     {
+
     }
 }
