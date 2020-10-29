@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WebSite1.WebUser" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="Customer" Type="WebSite1.Customer" ManuallyRouted="true">
+      <Path>
+        <Point X="2.25" Y="0.781" />
+        <Point X="3.5" Y="0.781" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAABAAIAAAAAAgAAAAAEAAAAAgAAAAA=</HashCode>
+      <FileName>WebUser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Customer" />
+      <Property Name="UserState" />
+      <Property Name="ShoppingCart" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WebSite1.Customer" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAIAAAAgAAAAAAAAAgA=</HashCode>
+      <FileName>Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSite1.Payment" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIQAAAAAAAAAAAAAAAEAAAAAAAgA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSite1.Account" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAEAAAAAKAAAAAAAAAAAAAAAIAAAAAAggA=</HashCode>
+      <FileName>Account.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Order" />
+      <Property Name="Payment" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WebSite1.ShoppingCart">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <AssociationLine Name="Account" Type="WebSite1.Account" ManuallyRouted="true">
+      <Path>
+        <Point X="4.25" Y="3.163" />
+        <Point X="4.75" Y="3.163" />
+        <Point X="4.75" Y="2.628" />
+        <Point X="5.25" Y="2.628" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAiAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>ShoppingCart.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Account" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WebSite1.UserState" Collapsed="true">
+    <Position X="1" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAABAQAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>UserState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSite1.LineItem" Collapsed="true">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEBAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LineItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Order" />
+      <Property Name="ShoppingCart" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WebSite1.OrderStatus" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <AssociationLine Name="Order" Type="WebSite1.Order" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="4.781" />
+        <Point X="8.5" Y="4.781" />
+        <Point X="8.5" Y="4.565" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAACgAAAAAAAAAAAoAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>OrderStatus.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Order" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WebSite1.Product" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACCAQAAAAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LineItem" />
+      <Property Name="Admin" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WebSite1.Admin" Collapsed="true">
+    <Position X="0.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAQBAAAAAAAQAAAAAQAAAAAAA=</HashCode>
+      <FileName>Admin.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WebUser" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WebSite1.Order">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAACAAAQAAAAIAAAAgAAAAAAAAAAEAAABAAAAA=</HashCode>
+      <FileName>Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Payment" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
