@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="3d17d6a7-6803-41c4-87f8-2327735f00c4" ChangeDateTime="11/05/2020 14:29:17">
+    <Property Name="ElementName" Value="[dbo].[ShoppingCart].[Aadress]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ShoppingCart]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="adress" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="40bc0285-bb5c-42e3-9f0d-63f1e63b27a9" ChangeDateTime="11/05/2020 14:30:05">
+    <Property Name="ElementName" Value="[dbo].[ShoppingCart].[adress]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ShoppingCart]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Adress" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8330e88f-e71f-4289-b72e-a19415910e3e" ChangeDateTime="11/05/2020 14:30:11">
+    <Property Name="ElementName" Value="[dbo].[ShoppingCart].[create]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ShoppingCart]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Create" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f7162b64-f5fd-4482-943f-c6206036f031" ChangeDateTime="11/05/2020 14:33:05">
+    <Property Name="ElementName" Value="[dbo].[SmartPost].[Adress]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SmartPost]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="client name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0a2fb8c4-b8bb-45a2-a55e-d3381ed51152" ChangeDateTime="11/05/2020 14:38:21">
+    <Property Name="ElementName" Value="[dbo].[Omniva].[Postal]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Omniva]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PostalCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6cdfc79e-f56f-40f1-8097-67953baeba11" ChangeDateTime="11/05/2020 14:38:43">
+    <Property Name="ElementName" Value="[dbo].[Omniva].[ParcelpostCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Omniva]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ParcelPostCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="15862ba4-1dc1-4cc9-8c47-eff5ff2ceeb9" ChangeDateTime="11/05/2020 14:44:03">
+    <Property Name="ElementName" Value="[dbo].[Ostukorv].[Add]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Ostukorv]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Add puh" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="34062c3f-e115-46a2-b924-ad64433166a9" ChangeDateTime="11/05/2020 14:44:17">
+    <Property Name="ElementName" Value="[dbo].[Ostukorv].[Add puh]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Ostukorv]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Add purchase" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="daba05aa-a856-4310-8026-a04e6ae768a2" ChangeDateTime="11/05/2020 14:52:53">
+    <Property Name="ElementName" Value="[dbo].[CommunicationPortal].[aja broneerimine]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CommunicationPortal]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="aja broneerimine  toodete proovimiseks" />
+  </Operation>
+</Operations>

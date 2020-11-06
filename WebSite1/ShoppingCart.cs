@@ -30,7 +30,7 @@ namespace WebSite1
             }
         }
 
-        public int postalode
+        public int postaCode
         {
             get => default;
             set

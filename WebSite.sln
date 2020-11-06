@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSite1", "WebSite1\WebSit
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scr", "scr", "{BF9A4FEA-8471-411D-8F11-ECD173165D49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationCore", "ApplicationCore\ApplicationCore.csproj", "{C0D24288-AFE6-49FC-A07B-86CB8C7DB41A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationCore", "ApplicationCore\ApplicationCore.csproj", "{C0D24288-AFE6-49FC-A07B-86CB8C7DB41A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
