@@ -6,8 +6,9 @@ namespace ApplicationCore.Entities.Basket
 {
     public class ShoppingCartItem
     {
-        private int itemID { get; set; }
-        public int itemQuantity { get; set; }
-        public int itemPrice { get;set, }
+        public int ShoppingCartItemId { get; set; }
+        public string ShoppingCartId { get; set; }
+        public Cosmetics Cosmetics { get; set; }
+        public int Amount { get; set;  }  
     }
 }

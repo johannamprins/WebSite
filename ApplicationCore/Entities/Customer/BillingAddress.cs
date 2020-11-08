@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ApplicationCore.Entities.Customer
 {
-    class BillingAddress
+    public class BillingAddress
     {
         private string StreetName;
         private string HouseNo;

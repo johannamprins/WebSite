@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ApplicationCore.Entities.Customer
+namespace ApplicationCore.Entities
 {
-    class Payment
+    public class Cosmetics
     {
-
     }
 }

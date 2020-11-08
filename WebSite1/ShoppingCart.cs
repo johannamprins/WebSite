@@ -38,4 +38,8 @@ namespace WebSite1
             }
         }
     }
+
+    public class Date
+    {
+    }
 }
