@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebSite1.Models;
 using WebSite1.ViewModels;
 
-namespace Shop.Controllers
+namespace WebSite1.Controllers
 {
     public class ItemController :Controller 
         //inherits from controller, gives us all functionality of a c
@@ -35,7 +35,7 @@ namespace Shop.Controllers
             var itemListViewModel = new ItemListViewModel();
             itemListViewModel.Items = _itemRepository.GetAllItem;
             itemListViewModel.CurrentCategory = "Bestsellers";
-            return View(itemListViewModel);
+            return View(itemListViewModel); 
 
         }
     }
