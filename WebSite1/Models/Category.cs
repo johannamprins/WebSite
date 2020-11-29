@@ -20,5 +20,5 @@ namespace WebSite1.Models
         // creating interfaces for each repo first and then registering interface with corresponding repository 
         //as a service and inject them into the application 
 
-    }
+    } 
 }
