@@ -1,10 +1,12 @@
 ﻿@model ItemListViewModel
 
-    <body>
+    
     <h1>@Model.CurrentCategory</h1>
     @foreach (var item in Model.Items)
     {
-        <div>
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+            </div>
             <h2>@item.Name</h2>
             <h3>@item.Price.ToString("c")</h3>
             <h4>@item.Category.CategoryName</h4>
@@ -12,4 +14,4 @@
         </div>
     }
 
-    </body>
+    
