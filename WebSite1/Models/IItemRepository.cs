@@ -9,7 +9,7 @@ namespace WebSite1.Models
     {
         // all items and all items that are on sale
         IEnumerable<Item> GetAllItem { get; }
-        IEnumerable<Item> GetItem { get; }
+        IEnumerable<Item> GetItemOnSale { get; }
         Item GetItemById(int itemId); //returns items by item id
 
     }
