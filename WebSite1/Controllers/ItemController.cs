@@ -8,7 +8,7 @@ using WebSite1.ViewModels;
 
 namespace WebSite1.Controllers
 {
-    public class ItemController :Controller 
+    public class ItemController : Controller 
         //inherits from controller, gives us all functionality of a c
         //but is still a class
     {
@@ -37,6 +37,15 @@ namespace WebSite1.Controllers
             itemListViewModel.CurrentCategory = "Bestsellers";
             return View(itemListViewModel); 
 
+        }
+
+        public IActionResult Details(int id)
+        {
+            var item = _itemRepository.GetItemById(id);
+            if (item == null)
+                return NotFound();
+
+            return View(item);
         }
     }
 }

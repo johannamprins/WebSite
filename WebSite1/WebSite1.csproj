@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Item\Details.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
@@ -23,5 +27,17 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Models\Category.cs">
       <IncludeInPackage>true</IncludeInPackage>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Item\Details.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Item\Details.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Item\Details.cshtml" />
   </ItemGroup>
 </Project>
