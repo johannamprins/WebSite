@@ -14,27 +14,9 @@ namespace WebSite1.Models
         {
             _appDbContext = appDbContext;
         }
-            
-        public IEnumerable<Item> GetAllItem 
-        {
-            get
-            {
-                return _appDbContext.Items.Include(c => c.Category);
 
-            }
-            
-        }
-
-        public IEnumerable<Item> GetItemOnSale
-        {
-            get
-            {
-                return _appDbContext.Items.Include(c => c.Category).Where(p => p.IsOnsale);
-
-            }
-        }
-
-        public IEnumerable<Item> GetItem => throw new NotImplementedException();
+        public IEnumerable<Item> GetAllItem => _appDbContext.Items.Include(c => c.Category);
+        public IEnumerable<Item> GetItemOnSale => _appDbContext.Items.Include(c => c.Category).Where(p => p.IsOnsale);
 
         public Item GetItemById(int itemId)
         {
