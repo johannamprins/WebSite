@@ -6,7 +6,7 @@ namespace WebSite1.Controllers
     {
         public IActionResult Index()
         {
-            throw new System.NotImplementedException();
+            return View();
         }
     }
 }
