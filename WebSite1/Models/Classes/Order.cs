@@ -4,8 +4,32 @@ using System.Text;
 
 namespace WebSite1
 {
-    public class Product
+    public class Order
     {
+        public int OrderId
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public int CustomerId
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public int CustomerName
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public int ProductId
         {
             get => default;
@@ -14,7 +38,7 @@ namespace WebSite1
             }
         }
 
-        public decimal ProductPrice
+        public float Amount
         {
             get => default;
             set
@@ -22,7 +46,7 @@ namespace WebSite1
             }
         }
 
-        public string ProductType
+        public DateTime OrderDate
         {
             get => default;
             set
@@ -30,7 +54,7 @@ namespace WebSite1
             }
         }
 
-        public LineItem LineItem
+        public OrderStatus OrderStatus
         {
             get => default;
             set
@@ -38,7 +62,7 @@ namespace WebSite1
             }
         }
 
-        public Admin Admin
+        public Payment Payment
         {
             get => default;
             set
@@ -46,17 +70,20 @@ namespace WebSite1
             }
         }
 
-        public void AddProduct()
+        public Account Account
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public void CreateOrder()
         {
             throw new System.NotImplementedException();
         }
 
-        public void ModifyProduct()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void selectProduct()
+        public void EditOrder(int OrderId)
         {
             throw new System.NotImplementedException();
         }
