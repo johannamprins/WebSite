@@ -21,7 +21,8 @@
                    <ul class="nav navbar-nav">
                        <li><a asp-controller="Home" asp-action="Index">Home</a>/li>
                        <li><a asp-controller="Item" asp-action="List">All Item</a>/li>
-                   </ul>
+                       <li>@Html.ActionLink("HomeController", "Index", "HomeController")</li>
+                   </ul>                   
                </div>
            </div>
        </nav>

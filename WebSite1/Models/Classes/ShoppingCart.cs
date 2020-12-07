@@ -6,7 +6,7 @@ namespace WebSite1
 {
     public class ShoppingCart
     {
-        public datetime Created
+        public DateTime Created
         {
             get => default;
             set

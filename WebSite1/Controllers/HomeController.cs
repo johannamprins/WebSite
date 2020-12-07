@@ -16,7 +16,7 @@ namespace WebSite1.Controllers
         {
             var homeViewModel = new HomeViewModel
             {
-                ItemOnSale = _category.GetItemOnSale
+                ItemOnSale = (System.Collections.Generic.IEnumerable<Item>)_category.GetItemOnSale
             };
             return View(homeViewModel);
         }
