@@ -3,7 +3,7 @@
 *@
 
 @model HomeViewModel
-    <partial name="Item"/>
+    <partial name="Item" />
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -12,3 +12,12 @@
     ViewBag.Title = "Index";
 }
     <h1>Index</h1>
+
+    <h2>Item On Sale</h2>
+
+    <div class="row">
+        @foreach (var item in Model.ItemOnSale)
+         {
+            <partial name="_itemCard" model="item" />
+         }
+    </div>
