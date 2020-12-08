@@ -4,19 +4,18 @@
     <Position X="3" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAABAAAAAQACAgAAAAACAAAABAAAAAA=</HashCode>
-      <FileName>WebUser.cs</FileName>
+      <FileName>Models\Classes\WebUser.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Admin" />
       <Property Name="UserState" />
-      <Property Name="ShoppingCart" />
     </ShowAsAssociation>
   </Class>
   <Class Name="WebSite1.Customer">
     <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAgAABAAAAAAAQCAAABACAAAQIAAAAAA=</HashCode>
-      <FileName>Customer.cs</FileName>
+      <FileName>Models\Classes\Customer.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="WebUser" />
@@ -26,14 +25,14 @@
     <Position X="0.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAhAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAA=</HashCode>
-      <FileName>Payment.cs</FileName>
+      <FileName>Models\Classes\Payment.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WebSite1.Account">
     <Position X="3" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAGAAAAAAAAAIAAAAoAAAAAAAAAAAAAAAIAAAAAABAA=</HashCode>
-      <FileName>Account.cs</FileName>
+      <FileName>Models\Classes\Account.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Customer" />
@@ -44,7 +43,7 @@
     <Position X="6.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>GAAAAAAAAAASAAAAAIAAAACAQAAAABAAgAAAAAAAAEA=</HashCode>
-      <FileName>Order.cs</FileName>
+      <FileName>Models\Classes\Order.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="OrderStatus" />
@@ -56,7 +55,7 @@
     <Position X="4.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAQAAAAAAAAAAACwYAAAAAAAQAAAAAAAAAAAAA=</HashCode>
-      <FileName>Product.cs</FileName>
+      <FileName>Models\Classes\Product.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="LineItem" />
@@ -67,7 +66,7 @@
     <Position X="2.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAEAAAAAAQAAAAAAAABAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>LineItem.cs</FileName>
+      <FileName>Models\Classes\LineItem.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Order" />
@@ -78,7 +77,7 @@
     <Position X="7.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAABAAAAAAAAAQAAAAAAAAAAEA=</HashCode>
-      <FileName>ShoppingCart.cs</FileName>
+      <FileName>Models\Classes\ShoppingCart.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Account" />
@@ -87,22 +86,22 @@
   <Class Name="WebSite1.OrderStatus">
     <Position X="9.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACAAgAAAAAACAAoAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Class1.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Classes\OrderStatus.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WebSite1.UserState">
     <Position X="10" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAACAAAABAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
-      <FileName>UserState.cs</FileName>
+      <FileName>Models\Classes\UserState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WebSite1.Admin">
     <Position X="11" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAQBAAAAAAAQAAAAAAACAAAAA=</HashCode>
-      <FileName>Admin.cs</FileName>
+      <FileName>Models\Classes\Admin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

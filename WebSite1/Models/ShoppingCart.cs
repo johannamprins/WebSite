@@ -81,7 +81,6 @@ namespace WebSite1.Models
 
             return localAmount;
         }
-
         public List<ShoppingCartItem> getShoppingCartItems()
         {
             return getShoppingCartItems() ?? (shoppingCartItems = _appDbContext.shoppingCartItems.Where
@@ -89,6 +88,12 @@ namespace WebSite1.Models
                 .Include(s => s.Item)
                 .ToList());
         }
-
+        public void ClearCart()
+        {
+            var cartItems = _appDbContext.shoppingCartItems.
+                Where(c => c.ShoppingCartId == ShoppingCardId);
+            _appDbContext.shoppingCartItems.RemoveRange(cartItems);
+            _appDbContext.SaveChanges();
+        }
     }
 }
