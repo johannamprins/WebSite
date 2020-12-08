@@ -56,5 +56,30 @@ namespace WebSite1.Models
             _appDbContext.SaveChanges();
         }
 
+        public int RemoveFromCart(Item item)
+        {
+            var shoppingCardItem = _appDbContext.shoppingCartItems.SingleOrDefault(
+                s => s.Item.ItemId == item.ItemId && s.ShoppingCartId == ShoppingCardId);
+
+            var localAmount = 0;
+
+            if (shoppingCardItem != null)
+            {
+                if (shoppingCardItem.Amount > 1)
+                {
+                    shoppingCardItem.Amount--;
+                    localAmount = shoppingCardItem.Amount;
+                }
+                else
+                {
+                    _appDbContext.shoppingCartItems.Remove(shoppingCardItem);
+                }
+            }
+
+            _appDbContext.SaveChanges();
+
+            return localAmount;
+        }
+
     }
 }
