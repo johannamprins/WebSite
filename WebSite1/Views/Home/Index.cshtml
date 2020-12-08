@@ -3,7 +3,7 @@
 *@
 
 @model HomeViewModel
-    <partial name="Item" />
+    @*<partial name="Item" />*@
 
 @{
     ViewBag.Title = "Index";
@@ -18,7 +18,8 @@
     <div class="row">
         @foreach (var item in Model.ItemOnSale)
          {
-               <partial name="_itemCard" model="item" />
+            @Html.DisplayFor(x => item.Name);
+              // <partial name="_itemCard" model="item" />
            <p>
                @Html.ActionLink("Edit", "Edit", new { id = item.ItemId }) |
                @Html.ActionLink("Details", "Details", new { id = item.ItemId }) |

@@ -32,5 +32,7 @@ namespace WebSite1.Models
 
         
         }
+        //TODO  => throw new NotImplementedException();
+        public object GetItemOnSale { get; set; }
     }
 }

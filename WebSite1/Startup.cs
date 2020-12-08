@@ -8,11 +8,8 @@ using WebSite1.Models;
 
 namespace WebSite1
 {
-
-    public class Startup //startup
+public class Startup //startup
     {
-
-
         public IConfiguration Configuration { get; }
 
         public Startup(IConfiguration configuration)
@@ -60,6 +57,5 @@ namespace WebSite1
                     ); // allows our app to route through the request and return a response
             });
         }
-
     }
 }

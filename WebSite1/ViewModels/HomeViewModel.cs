@@ -8,6 +8,10 @@ namespace WebSite1.ViewModels
 {
     public class HomeViewModel
     {
-        public IEnumerable<Item> ItemOnSale {get; set;}
+        public HomeViewModel()
+        {
+            ItemOnSale = new List<Item>();
+        }
+        public IList<Item> ItemOnSale {get; set;}
     }
 }

@@ -14,11 +14,15 @@ namespace WebSite1.Controllers
         }
         public IActionResult Index()
         {
-            var homeViewModel = new HomeViewModel
-            {
-                ItemOnSale = (System.Collections.Generic.IEnumerable<Item>)_category.GetItemOnSale
-            };
+            var homeViewModel = new HomeViewModel();
+
+            homeViewModel.ItemOnSale.Add(new Item() { Name="Value" }); //(System.Collections.Generic.IEnumerable<Item>)_category.GetItemOnSale
+            
             return View(homeViewModel);
+        }
+        public IActionResult HomePage()
+        {
+            return View();
         }
     }
 }
