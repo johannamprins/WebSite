@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace WebSite1.Models
@@ -79,6 +80,14 @@ namespace WebSite1.Models
             _appDbContext.SaveChanges();
 
             return localAmount;
+        }
+
+        public List<ShoppingCartItem> getShoppingCartItems()
+        {
+            return getShoppingCartItems() ?? (shoppingCartItems = _appDbContext.shoppingCartItems.Where
+                    (c => c.ShoppingCartId == ShoppingCardId)
+                .Include(s => s.Item)
+                .ToList());
         }
 
     }
