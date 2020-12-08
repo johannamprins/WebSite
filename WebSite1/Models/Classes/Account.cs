@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WebSite1.Controllers;
 
 namespace WebSite1
 {
@@ -60,6 +61,11 @@ namespace WebSite1
             set
             {
             }
+        }
+
+        public static implicit operator Account(AccountController v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
