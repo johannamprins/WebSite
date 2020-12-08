@@ -11,6 +11,6 @@ namespace WebSite1.Models
         public string ShoppingCartId { get; set; }
         public Item Item { get; set; }
         public decimal Price { get; set; }
-
+        public int Amount { get; set; }
     }
 }
