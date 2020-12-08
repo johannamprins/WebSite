@@ -31,5 +31,30 @@ namespace WebSite1.Models
             return new ShoppingCart(context) { ShoppingCardId = cardId};
         }
 
+        public void AddToCart(Item item, int amount)
+        {
+            var shoppingCardItem = _appDbContext.shoppingCartItems.SingleOrDefault(
+                s => s.Item.ItemId == item.ItemId && s.ShoppingCartId == ShoppingCardId);
+
+
+            if (shoppingCardItem == null)
+            {
+                shoppingCardItem = new ShoppingCartItem
+                {
+                    ShoppingCartId = ShoppingCardId,
+                    Item = item,
+                    Amount = amount
+                };
+
+                _appDbContext.shoppingCartItems.Add(shoppingCardItem);
+            }
+            else
+            {
+                shoppingCardItem.Amount++;
+            }
+
+            _appDbContext.SaveChanges();
+        }
+
     }
 }
