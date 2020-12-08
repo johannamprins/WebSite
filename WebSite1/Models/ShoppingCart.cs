@@ -95,5 +95,13 @@ namespace WebSite1.Models
             _appDbContext.shoppingCartItems.RemoveRange(cartItems);
             _appDbContext.SaveChanges();
         }
+        public decimal GetShoppingTotal()
+        {
+            var total = _appDbContext.shoppingCartItems.
+                Where(c => c.ShoppingCartId == ShoppingCardId)
+                .Select(c => c.Item.Price * c.Amount).Sum();
+            return total;
+        }
+
     }
 }

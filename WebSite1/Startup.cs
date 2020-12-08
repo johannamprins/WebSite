@@ -30,6 +30,10 @@ public class Startup //startup
             // it will remain active for the whole request! - needed to work with database!
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IItemRepository, ItemRepository>();
+            services.AddScoped <ShoppingCart>(sc => ShoppingCart.GetCart(sc));
+
+            services.AddHttpContextAccessor();
+            services.AddSession();
 
             //controllers create responses in MVC
 
@@ -47,6 +51,7 @@ public class Startup //startup
 
             app.UseHttpsRedirection();
             app.UseStaticFiles(); // will automatically search for directory wwwroot - enables images and js
+            app.UseSession();
             app.UseRouting();
 
             app.UseEndpoints(endpoints => // enable MVC to respond to request
