@@ -34,24 +34,24 @@ namespace WebSite1.Models
 
         public void AddToCart(Item item, int amount)
         {
-            var shoppingCardItem = _appDbContext.shoppingCartItems.SingleOrDefault(
+            var shoppingCartItem = _appDbContext.shoppingCartItems.SingleOrDefault(
                 s => s.Item.ItemId == item.ItemId && s.ShoppingCartId == ShoppingCartId);
 
 
-            if (shoppingCardItem == null)
+            if (shoppingCartItem == null)
             {
-                shoppingCardItem = new ShoppingCartItem
+                shoppingCartItem = new ShoppingCartItem
                 {
                     ShoppingCartId = ShoppingCartId,
                     Item = item,
                     Amount = amount
                 };
 
-                _appDbContext.shoppingCartItems.Add(shoppingCardItem);
+                _appDbContext.shoppingCartItems.Add(shoppingCartItem);
             }
             else
             {
-                shoppingCardItem.Amount++;
+                shoppingCartItem.Amount++;
             }
 
             _appDbContext.SaveChanges();
