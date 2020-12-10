@@ -43,5 +43,17 @@ namespace WebSite1.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public RedirectToActionResult RemoveFromShoppingCart(int itemId)
+        {
+            var selectedItem = _itemRepository.GetAllItem.FirstOrDefault(c => c.ItemId == itemId);
+
+            if (selectedItem != null)
+            {
+                _shoppingCart.RemoveFromCart(selectedItem);
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }
