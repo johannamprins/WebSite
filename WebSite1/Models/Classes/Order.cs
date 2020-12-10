@@ -70,13 +70,13 @@ namespace WebSite1
             }
         }
 
-        public Account Account
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        //public Account Account
+        //{
+        //    get => default;
+        //    set
+        //    {
+        //    }
+        //}
 
         public void CreateOrder()
         {
