@@ -31,5 +31,17 @@ namespace WebSite1.Controllers
 
             return View(shoppingCartViewModel);
         }
+
+        public RedirectToActionResult AddToShoppingCart(int itemId)
+        {
+            var selectedItem = _itemRepository.GetAllItem.FirstOrDefault(c => c.ItemId == itemId);
+
+            if (selectedItem != null)
+            {
+                _shoppingCart.AddToCart(selectedItem, 1);
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }
