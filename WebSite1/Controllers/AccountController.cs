@@ -21,10 +21,7 @@ namespace WebSite1.Controllers
         }
         public AccountController SignInManager
         {
-            get
-            {
-                return _signInManager ?? HttpContext.GetOwinContext().Get<AccountController>();
-            }
+            get => _signInManager ?? HttpContext.GetOwinContext().Get<AccountController>();
             private set
             {
                 _signInManager = value;
