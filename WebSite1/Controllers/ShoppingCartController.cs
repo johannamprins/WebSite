@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebSite1.Models;
+using WebSite1.ViewModels;
 
 namespace WebSite1.Controllers
 {
@@ -21,6 +22,14 @@ namespace WebSite1.Controllers
         public ViewResult Index()
         {
             _shoppingCart.ShoppingCartItems = _shoppingCart.GetShoppingCartItems();
+
+            var shoppingCartViewModel = new ShoppingCartViewModel
+            {
+                ShoppingCart = _shoppingCart,
+                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
+            };
+
+            return View(shoppingCartViewModel);
         }
     }
 }
