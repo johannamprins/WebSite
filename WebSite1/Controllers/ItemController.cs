@@ -47,5 +47,10 @@ namespace WebSite1.Controllers
 
             return View(item);
         }
+
+        public IActionResult AddToShoppingCart()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
