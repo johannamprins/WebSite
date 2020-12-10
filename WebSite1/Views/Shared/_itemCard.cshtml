@@ -8,6 +8,13 @@
         <h3><a asp-controller="Item" asp-action="Details" asp-route-id="@Model.ItemId">@Model.Name</a></h3>
         <p>@Model.Description</p>
         </div>
+        <div class="addToCart">
+            <p class="button">
+                <a class="btn btn-primary"
+                   asp-controllers="ShoppingCart"
+                   asp-action ="AddToShoppingCart"
+                   asp-route-itemId="@Model.ItemId">Add to Cart</a>
+            </p>
+        </div>
     </div>
 </div>
-
