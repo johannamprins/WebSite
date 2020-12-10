@@ -30,7 +30,7 @@ public class Startup //startup
             // it will remain active for the whole request! - needed to work with database!
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IItemRepository, ItemRepository>();
-            services.AddScoped <ShoppingCart>(sc => ShoppingCart.GetCart(sc));
+            services.AddScoped<ShoppingCart>(sc => ShoppingCart.GetCart(sc));
 
             services.AddHttpContextAccessor();
             services.AddSession();

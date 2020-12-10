@@ -34,7 +34,7 @@ namespace WebSite1.Models
 
         public void AddToCart(Item item, int amount)
         {
-            var shoppingCartItem = _appDbContext.shoppingCartItems.SingleOrDefault(
+            var shoppingCartItem = _appDbContext.ShoppingCartItems.SingleOrDefault(
                 s => s.Item.ItemId == item.ItemId && s.ShoppingCartId == ShoppingCartId);
 
 
@@ -47,7 +47,7 @@ namespace WebSite1.Models
                     Amount = amount
                 };
 
-                _appDbContext.shoppingCartItems.Add(shoppingCartItem);
+                _appDbContext.ShoppingCartItems.Add(shoppingCartItem);
             }
             else
             {
@@ -59,21 +59,21 @@ namespace WebSite1.Models
 
         public int RemoveFromCart(Item item)
         {
-            var shoppingCardItem = _appDbContext.shoppingCartItems.SingleOrDefault(
+            var shoppingCartItem = _appDbContext.ShoppingCartItems.SingleOrDefault(
                 s => s.Item.ItemId == item.ItemId && s.ShoppingCartId == ShoppingCartId);
 
             var localAmount = 0;
 
-            if (shoppingCardItem != null)
+            if (shoppingCartItem != null)
             {
-                if (shoppingCardItem.Amount > 1)
+                if (shoppingCartItem.Amount > 1)
                 {
-                    shoppingCardItem.Amount--;
-                    localAmount = shoppingCardItem.Amount;
+                    shoppingCartItem.Amount--;
+                    localAmount = shoppingCartItem.Amount;
                 }
                 else
                 {
-                    _appDbContext.shoppingCartItems.Remove(shoppingCardItem);
+                    _appDbContext.ShoppingCartItems.Remove(shoppingCartItem);
                 }
             }
 
@@ -81,9 +81,9 @@ namespace WebSite1.Models
 
             return localAmount;
         }
-        public List<ShoppingCartItem> getShoppingCartItems()
+        public List<ShoppingCartItem> GetShoppingCartItems()
         {
-            return getShoppingCartItems() ?? (ShoppingCartItems = _appDbContext.shoppingCartItems.Where
+            return GetShoppingCartItems() ?? (ShoppingCartItems = _appDbContext.ShoppingCartItems.Where
                     (c => c.ShoppingCartId == ShoppingCartId)
                 .Include(s => s.Item)
                 .ToList());
@@ -92,12 +92,12 @@ namespace WebSite1.Models
         {
             var cartItems = _appDbContext.ShoppingCartItems.
                 Where(c => c.ShoppingCartId == ShoppingCartId);
-            _appDbContext.shoppingCartItems.RemoveRange(cartItems);
+            _appDbContext.ShoppingCartItems.RemoveRange(cartItems);
             _appDbContext.SaveChanges();
         }
-        public decimal GetShoppingTotal()
+        public decimal GetShoppingCartTotal()
         {
-            var total = _appDbContext.shoppingCartItems.
+            var total = _appDbContext.ShoppingCartItems.
                 Where(c => c.ShoppingCartId == ShoppingCartId)
                 .Select(c => c.Item.Price * c.Amount).Sum();
             return (decimal) total;
