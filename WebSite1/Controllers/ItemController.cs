@@ -15,13 +15,16 @@ namespace WebSite1.Controllers
         private readonly IItemRepository _itemRepository;
         private readonly ICategoryRepository _categoryRepository;
 
+        public string CurrrentCategory { get; private set; }
+        public string Items { get; private set; }
+
         public ItemController(IItemRepository itemRepository, ICategoryRepository categoryRepository)
         {
             _itemRepository = itemRepository;
             _categoryRepository = categoryRepository;
         }
          
-        public IActionResult List() // builtin type for MVC, returns a view
+        public ViewResult List(string category) // builtin type for MVC, returns a view
         {
             // ViewBag.CurrentCategory = "Bestsellers"; 
             //return View(_itemRepository.GetAllItem);
@@ -30,13 +33,28 @@ namespace WebSite1.Controllers
             //that will contain all the data in the view
             //and will be constructed in the controller
             //then passed to the view
- 
 
-            var itemListViewModel = new ItemListViewModel();
-            itemListViewModel.Items = _itemRepository.GetAllItem;
-            itemListViewModel.CurrentCategory = "Bestsellers";
-            return View(itemListViewModel); 
+            IEnumerable<Item> items;
+            string currentCategory;
 
+            if (string.IsNullOrEmpty(category))
+            {
+                items = _itemRepository.GetAllItem.OrderBy(c => c.ItemId);
+                currentCategory = "All Item";
+            }
+            else
+            {
+                items = _itemRepository.GetAllItem.Where(c => c.Category.CategoryName == category);
+
+                currentCategory = _categoryRepository.GetAllCategories.FirstOrDefault(c =>
+                c.CategoryName == category)?.CategoryName;
+            }
+
+            return View( new ItemListViewModel)
+             {
+                Items = items;
+                CurrrentCategory = currentCategory;
+             }      
         }
 
         public IActionResult Details(int id)
