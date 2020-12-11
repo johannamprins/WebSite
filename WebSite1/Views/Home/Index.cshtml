@@ -1,30 +1,27 @@
-﻿@model ShoppingCartViewModel
+﻿@model HomeViewModel
+    @*<partial name="Item" />*@
 
-<h2>Shopping Cart: All your item you love</h2>
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Selected Amount</th>
-            <th>Item</th>
-            <th class="text-right">Price</th>
-            <th class="text-right">SubTotal</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.ShoppingCart.ShoppingCartItems)
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <h1>Index</h1>
+    
+    <p>@Html.ActionLink("Create new", "Create")</p>
+
+    <h2>Item On Sale</h2>
+
+    <div class="row">
+        @foreach (var item in Model.ItemOnSale)
          {
-            <tr>
-                <td class="text-center">@item.Amount</td>
-                <td class="text-left">@item.Item.Name</td>
-                <td class="text-right">@item.Item.Price</td>
-                <td class="text-right">
-                    @(item.Amount * item.Item.Price)
-                </td>
-            </tr>
+            @Html.DisplayFor(x => item.Name);
+              // <partial name="_itemCard" model="item" />
+           <p>
+               @Html.ActionLink("Edit", "Edit", new { id = item.ItemId }) |
+               @Html.ActionLink("Details", "Details", new { id = item.ItemId }) |
+               @Html.ActionLink("Delete", "Delete", new { id = item.ItemId })    
+           </p>
          }
-    </tbody>
-    <tfoot>
-        <td colspan="3" class="text-right">Total</td>
-        <td class="text-right">@Model.ShoppingCartTotal</td>
-    </tfoot>
-</table>
+    </div>
+
+    
