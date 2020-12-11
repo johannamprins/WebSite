@@ -52,8 +52,6 @@ namespace WebSite1.Controllers
 
             return View( new ItemListViewModel)
              {
-                Items = items;
-                CurrrentCategory = currentCategory;
              }      
         }
 

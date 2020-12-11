@@ -1,4 +1,4 @@
-﻿@model IEnumerable<_Components_CategoryMenu_Ihtml>
+﻿@model IEnumerable<_Components_CategoryMenu_Default>
 
 <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
@@ -7,7 +7,7 @@
          {
             <li>
                 <a asp-controller="Item" asp-action="List"
-                   asp-route-category="@category.CategoyName">@category.CategoryName</a>
+                   asp-route-category="@category.CategoryName">@category.CategoryName</a>
                 //siin on viga küsin konsultatsioonis
             </li>
          }
