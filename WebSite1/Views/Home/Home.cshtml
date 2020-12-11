@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model HomeViewModel
+    @*<partial name="Item" />*@
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <h1>Index</h1>
+    
+    <p>@Html.ActionLink("Create new", "Create")</p>
+
+    <h2>Item On Sale</h2>
+
+    <div class="row">
+        @foreach (var item in Model.ItemOnSale)
+         {
+            @Html.DisplayFor(x => item.Name);
+              // <partial name="_itemCard" model="item" />
+           <p>
+               @Html.ActionLink("Edit", "Edit", new { id = item.ItemId }) |
+               @Html.ActionLink("Details", "Details", new { id = item.ItemId }) |
+               @Html.ActionLink("Delete", "Delete", new { id = item.ItemId })    
+           </p>
+         }
+    </div>
+
+    
