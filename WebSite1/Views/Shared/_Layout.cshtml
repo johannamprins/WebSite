@@ -32,7 +32,6 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li><a asp-controler="Cosmetics" asp-action="List">All Cosmetics</a></li>
                         @await Component.InvokeAsync("CategoryMenu")
                         @await Component.InvokeAsync("ShoppingCartSummary")
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
