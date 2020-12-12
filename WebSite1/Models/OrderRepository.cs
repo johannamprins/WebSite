@@ -25,14 +25,14 @@ namespace WebSite1.Models
             var shoppingCartItems = _shoppingCart.GetShoppingCartItems();
             foreach ( var shoppingCartItem in shoppingCartItems)
             {
-                var orderDetail = new Order
+                var orderDetail = new OrderDetail
                 {
                     Amount = shoppingCartItem.Amount,
                     Price = (decimal)shoppingCartItem.Item.Price,
                     ItemId = shoppingCartItem.Item.ItemId,
                     OrderId = order.OrderId
                 };
-                _appDbContext.orderDetails.Add(orderDetail);
+                _appDbContext.OrderDetails.Add(orderDetail);
             }
             _appDbContext.SaveChanges();
         }        
