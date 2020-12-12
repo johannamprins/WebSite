@@ -13,6 +13,8 @@ namespace WebSite1.Models
         public DbSet<Item> Items { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> orderDetails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

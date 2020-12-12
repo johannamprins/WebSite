@@ -31,6 +31,7 @@ public class Startup //startup
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IItemRepository, ItemRepository>();
             services.AddScoped<ShoppingCart>(sc => ShoppingCart.GetCart(sc));
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
             services.AddHttpContextAccessor();
             services.AddSession();
