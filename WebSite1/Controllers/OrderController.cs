@@ -45,7 +45,9 @@ namespace WebSite1.Controllers
 
         public IActionResult CheckoutComplete()
         {
-            throw new NotImplementedException();
+            ViewBag.CheckoutCompleteMessage = "Thank you for your order. Enjoy your candy";
+            return View();
         }
+
     }
 }
