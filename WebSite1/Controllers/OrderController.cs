@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebSite1.Models;
 
 namespace WebSite1.Controllers
@@ -21,6 +22,30 @@ namespace WebSite1.Controllers
         public IActionResult Checkout()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Checkout(Order order)
+        {
+            _shoppingCart.ShoppingCartItems = _shoppingCart.GetShoppingCartItems();
+            if (_shoppingCart.ShoppingCartItems.Count == 0)
+            {
+                ModelState.AddModelError("", "Your cart is empty");
+            }
+
+            if (ModelState.IsValid)
+            {
+                _orderRepository.CreateOrder(order);
+                _shoppingCart.ClearCart();
+                return RedirectToAction("CheckoutComplete");
+            }
+
+            return View(order);
+        }
+
+        public IActionResult CheckoutComplete()
+        {
+            throw new NotImplementedException();
         }
     }
 }
