@@ -29,6 +29,31 @@ namespace WebSite1.Controllers
             return View(itemListViewModel);
         }
 
+        public IActionResult List(string category)
+        {
+            IEnumerable<Item> items;
+            string currentCategory;
+
+            if (string.IsNullOrEmpty(category))
+            {
+                items = _itemRepository.GetAllItem.OrderBy(c => c.ItemId);
+                currentCategory = "All cosmetics";
+            }
+            else
+            {
+                items = _itemRepository.GetAllItem.Where(c => c.Category.CategoryName == category);
+
+                currentCategory = _itemRepository.GetAllCategories.FirstOrDefault(c => c.CategoryName == category)
+                    ?.CategoryName;
+            }
+
+            return View(new ItemListViewModel
+            {
+                Items = items,
+                    CurrentCategory = currentCategory
+            });
+        }
+
         public IActionResult Details(int id)
         {
             var item = _itemRepository.GetItemById(id);
@@ -38,9 +63,9 @@ namespace WebSite1.Controllers
             return View(item);
         }
 
-        public IActionResult AddToShoppingCart()
-        {
-            throw new NotImplementedException();
-        }
+        //public IActionResult AddToShoppingCart()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
