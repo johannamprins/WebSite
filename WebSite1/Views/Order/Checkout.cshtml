@@ -1,0 +1,56 @@
+﻿@model WebSite1.Order
+
+<form asp-action="Checkout" method="Post" class="from-horizontal" role="form">
+    <h4>You're on step away from ordering awesome cosmetic</h4>
+
+    <div class="from-group">
+        <label asp-for="FirstName" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="FirstName" class="form-control" />
+        </div>
+    </div>
+
+    <div class="from-group">
+        <label asp-for="LastName" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="LastName" class="form-control" />
+        </div>
+    </div>
+        
+    <div class="from-group">
+        <label asp-for="Address" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Address" class="form-control" />
+        </div>
+    </div>
+        
+    <div class="from-group">
+        <label asp-for="City" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="City" class="form-control" />
+        </div>
+    </div>
+
+        
+    <div class="from-group">
+        <label asp-for="State" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="State" class="form-control" />
+        </div>
+    </div>
+        
+    <div class="from-group">
+        <label asp-for="ZipCode" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="ZipCode" class="form-control" />
+        </div>
+    </div>
+        
+    <div class="from-group">
+        <label asp-for="PhoneNumber" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="PhoneNumber" class="form-control" />
+        </div>
+    </div>
+</form>
+
