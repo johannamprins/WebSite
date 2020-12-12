@@ -8,51 +8,24 @@ using WebSite1.ViewModels;
 
 namespace WebSite1.Controllers
 {
-    public class ItemController : Controller 
-        //inherits from controller, gives us all functionality of a c
-        //but is still a class
+    public class ItemController : Controller
+    //inherits from controller, gives us all functionality of a c
+    //but is still a class
     {
         private readonly IItemRepository _itemRepository;
         private readonly ICategoryRepository _categoryRepository;
-
-        public string CurrrentCategory { get; private set; }
-        public string Items { get; private set; }
-
         public ItemController(IItemRepository itemRepository, ICategoryRepository categoryRepository)
         {
             _itemRepository = itemRepository;
             _categoryRepository = categoryRepository;
         }
-         
-        public ViewResult List(string category) // builtin type for MVC, returns a view
+
+        public IActionResult List() // builtin type for MVC, returns a view
         {
-            // ViewBag.CurrentCategory = "Bestsellers"; 
-            //return View(_itemRepository.GetAllItem);
-
-            //changing from viewbag to Viewmodel, bc is a class
-            //that will contain all the data in the view
-            //and will be constructed in the controller
-            //then passed to the view
-
-            IEnumerable<Item> items;
-            string currentCategory;
-
-            if (string.IsNullOrEmpty(category))
-            {
-                items = _itemRepository.GetAllItem.OrderBy(c => c.ItemId);
-                currentCategory = "All Item";
-            }
-            else
-            {
-                items = _itemRepository.GetAllItem.Where(c => c.Category.CategoryName == category);
-
-                currentCategory = _categoryRepository.GetAllCategories.FirstOrDefault(c =>
-                c.CategoryName == category)?.CategoryName;
-            }
-
-            return View( new ItemListViewModel)
-             {
-             }      
+            var itemListViewModel = new ItemListViewModel();
+            itemListViewModel.Items = _itemRepository.GetAllItem;
+            itemListViewModel.CurrentCategory = "Bestseller";
+            return View(itemListViewModel);
         }
 
         public IActionResult List(string category)
@@ -76,7 +49,7 @@ namespace WebSite1.Controllers
             return View(new ItemListViewModel
             {
                 Items = items,
-                    CurrentCategory = currentCategory
+                CurrentCategory = currentCategory
             });
         }
 
@@ -85,13 +58,12 @@ namespace WebSite1.Controllers
             var item = _itemRepository.GetItemById(id);
             if (item == null)
                 return NotFound();
-
             return View(item);
         }
 
-        //public IActionResult AddToShoppingCart()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public IActionResult AddToShoppingCart()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
