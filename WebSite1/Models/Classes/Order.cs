@@ -7,6 +7,7 @@ namespace WebSite1
 {
     public class Order
     {
+        public int OrderId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
@@ -17,14 +18,6 @@ namespace WebSite1
 
         public List<OrderDetail> OrderDetails { get; set; }
 
-
-        public int OrderId
-        {
-            get => default;
-            set
-            {
-            }
-        }
 
         public int CustomerId
         {
