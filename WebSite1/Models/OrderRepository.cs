@@ -25,7 +25,7 @@ namespace WebSite1.Models
             var shoppingCartItems = _shoppingCart.GetShoppingCartItems();
             foreach ( var shoppingCartItem in shoppingCartItems)
             {
-                var orderDetail = new OrderDetail
+                var orderDetail = new Order
                 {
                     Amount = shoppingCartItem.Amount,
                     Price = (decimal)shoppingCartItem.Item.Price,
