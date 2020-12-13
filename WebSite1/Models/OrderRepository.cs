@@ -32,7 +32,7 @@ namespace WebSite1.Models
                     ItemId = shoppingCartItem.Item.ItemId,
                     OrderId = order.OrderId
                 };
-                _appDbContext.orderDetails.Add(orderDetail);
+                _appDbContext.OrderDetails.Add(orderDetail);
             }
             _appDbContext.SaveChanges();
         }        

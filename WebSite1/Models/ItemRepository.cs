@@ -17,6 +17,7 @@ namespace WebSite1.Models
 
         public IEnumerable<Item> GetAllItem => _appDbContext.Items.Include(c => c.Category);
         public IEnumerable<Item> GetItemOnSale => _appDbContext.Items.Include(c => c.Category).Where(p => p.IsOnsale);
+        public object GetAllCategories { get; set; }
 
         public Item GetItemById(int itemId)
         {
