@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using WebSite1.Models;
 
-namespace WebSite1
+namespace WebSite1.Models
 {
     public class Order
     {

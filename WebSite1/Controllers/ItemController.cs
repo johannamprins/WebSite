@@ -15,16 +15,15 @@ namespace WebSite1.Controllers
         private readonly IItemRepository _itemRepository;
         private readonly ICategoryRepository _categoryRepository;
 
-        public string CurrrentCategory { get; private set; }
-        public string Items { get; private set; }
+        public string category { get; private set; }
 
         public ItemController(IItemRepository itemRepository, ICategoryRepository categoryRepository)
         {
             _itemRepository = itemRepository;
             _categoryRepository = categoryRepository;
         }
-         
-        public ViewResult List(string category) // builtin type for MVC, returns a view
+
+        public IActionResult List() // builtin type for MVC, returns a view
         {
             // ViewBag.CurrentCategory = "Bestsellers"; 
             //return View(_itemRepository.GetAllItem);
@@ -50,9 +49,9 @@ namespace WebSite1.Controllers
                 c.CategoryName == category)?.CategoryName;
             }
 
-            return View( new ItemListViewModel)
-             {
-             }      
+            return View(new ItemListViewModel
+            {
+            });      
         }
 
         public IActionResult Details(int id)

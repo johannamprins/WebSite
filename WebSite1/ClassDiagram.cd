@@ -39,18 +39,6 @@
       <Property Name="Payment" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="WebSite1.Order">
-    <Position X="6.5" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>GAAAAAAAAAASAAAAAIAAAACAQAAAABAAgAAAAAAAAEA=</HashCode>
-      <FileName>Models\Classes\Order.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="OrderStatus" />
-      <Property Name="Payment" />
-      <Property Name="Account" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="WebSite1.Product">
     <Position X="4.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
@@ -68,13 +56,9 @@
       <HashCode>EAEAAAAAAQAAAAAAAABAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Classes\LineItem.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Order" />
-      <Property Name="ShoppingCart" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="WebSite1.ShoppingCart">
-    <Position X="7.25" Y="4.25" Width="1.5" />
+    <Position X="8.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAABAAAAAAAAAQAAAAAAAAAAEA=</HashCode>
       <FileName>Models\Classes\ShoppingCart.cs</FileName>
