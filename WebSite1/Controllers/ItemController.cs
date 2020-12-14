@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebSite1.Models;
 using WebSite1.ViewModels;
@@ -25,13 +24,6 @@ namespace WebSite1.Controllers
             _categoryRepository = categoryRepository;
         }
 
-
-        public IActionResult List() // builtin type for MVC, returns a view
-        {
-            // ViewBag.CurrentCategory = "Bestsellers"; 
-            //return View(_itemRepository.GetAllItem);
-
-
         public IActionResult List() // builtin type for MVC, returns a view
         {
             var itemListViewModel = new ItemListViewModel();
@@ -54,15 +46,12 @@ namespace WebSite1.Controllers
             {
                 items = _itemRepository.GetAllItem.Where(c => c.Category.CategoryName == category);
 
-                currentCategory = _itemRepository.GetAllCategories.FirstOrDefault(c => c.CategoryName == category)
+                currentCategory = _categoryRepository.GetAllCategories.FirstOrDefault(c => c.CategoryName == category)
                     ?.CategoryName;
             }
 
             return View(new ItemListViewModel
-            {
-
-            });      
-
+            {   
                 Items = items,
                 CurrentCategory = currentCategory
             });
