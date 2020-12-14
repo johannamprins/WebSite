@@ -27,7 +27,7 @@ namespace WebSite1.Controllers
         public IActionResult List() // builtin type for MVC, returns a view
         {
             var itemListViewModel = new ItemListViewModel();
-            itemListViewModel.Items = _itemRepository.GetAllItem;
+            itemListViewModel.Item = _itemRepository.GetAllItem;
             itemListViewModel.CurrentCategory = "Bestseller";
             return View(itemListViewModel);
         }
@@ -52,7 +52,7 @@ namespace WebSite1.Controllers
 
             return View(new ItemListViewModel
             {   
-                Items = items,
+                Item = items,
                 CurrentCategory = currentCategory
             });
 
