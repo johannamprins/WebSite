@@ -22,7 +22,7 @@ namespace WebSite1.Models
 
         IEnumerable<Item> IItemRepository.GetItemOnSale => throw new NotImplementedException();
 
-        object IItemRepository.GetAllCategories { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        IEnumerable<Category> IItemRepository.GetAllCategories { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public Item GetItemById(int itemId)
         {

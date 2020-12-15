@@ -86,14 +86,6 @@ namespace WebSite1.Models
             }
         }
 
-        public OrderStatus OrderStatus
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         public Payment Payment 
         {
             get => default;
