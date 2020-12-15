@@ -14,25 +14,23 @@ namespace WebSite1.Controllers
     {
         private readonly IItemRepository _itemRepository;
         private readonly ICategoryRepository _categoryRepository;
-<<<<<<< HEAD
+//
 
         public string category { get; private set; }
 
-=======
->>>>>>> d4e941e2a4ff7f3bba1b02710f146e41e752b6fc
+//
         public ItemController(IItemRepository itemRepository, ICategoryRepository categoryRepository)
         {
             _itemRepository = itemRepository;
             _categoryRepository = categoryRepository;
         }
-<<<<<<< HEAD
+//
 
-        public IActionResult List() // builtin type for MVC, returns a view
-        {
+        //public IActionResult List() // builtin type for MVC, returns a view
+       // {
             // ViewBag.CurrentCategory = "Bestsellers"; 
             //return View(_itemRepository.GetAllItem);
-=======
->>>>>>> d4e941e2a4ff7f3bba1b02710f146e41e752b6fc
+       // }
 
         public IActionResult List() // builtin type for MVC, returns a view
         {
@@ -61,14 +59,10 @@ namespace WebSite1.Controllers
             }
 
             return View(new ItemListViewModel
-            {
-<<<<<<< HEAD
-            });      
-=======
+            {    
                 Items = items,
                 CurrentCategory = currentCategory
             });
->>>>>>> d4e941e2a4ff7f3bba1b02710f146e41e752b6fc
         }
 
         public IActionResult Details(int id)

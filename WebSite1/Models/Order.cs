@@ -107,15 +107,5 @@ namespace WebSite1.Models
 
         [BindNever]
         public decimal OrderTotal { get; set; }
-
-        public void CreateOrder()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void EditOrder(int OrderId)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

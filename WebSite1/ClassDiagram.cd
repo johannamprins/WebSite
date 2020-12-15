@@ -28,19 +28,8 @@
       <FileName>Models\Classes\Payment.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebSite1.Account">
-    <Position X="3" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAGAAAAAAAAAIAAAAoAAAAAAAAAAAAAAAIAAAAAABAA=</HashCode>
-      <FileName>Models\Classes\Account.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Customer" />
-      <Property Name="Payment" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="WebSite1.Product">
-    <Position X="4.75" Y="3.5" Width="1.5" />
+    <Position X="5.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAQAAAAAAAAAAACwYAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Classes\Product.cs</FileName>
@@ -51,38 +40,21 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="WebSite1.LineItem">
-    <Position X="2.25" Y="4.5" Width="1.5" />
+    <Position X="2.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAEAAAAAAQAAAAAAAABAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Classes\LineItem.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebSite1.ShoppingCart">
-    <Position X="8.25" Y="3.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAABAAAAAAAAAQAAAAAAAAAAEA=</HashCode>
-      <FileName>Models\Classes\ShoppingCart.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Account" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="WebSite1.OrderStatus">
-    <Position X="9.25" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\Classes\OrderStatus.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="WebSite1.UserState">
-    <Position X="10" Y="4.25" Width="1.5" />
+    <Position X="7.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAACAAAABAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
       <FileName>Models\Classes\UserState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WebSite1.Admin">
-    <Position X="11" Y="1.75" Width="1.5" />
+    <Position X="7.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAQBAAAAAAAQAAAAAAACAAAAA=</HashCode>
       <FileName>Models\Classes\Admin.cs</FileName>
