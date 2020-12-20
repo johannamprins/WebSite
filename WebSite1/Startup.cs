@@ -55,6 +55,7 @@ public class Startup //startup
             app.UseStaticFiles(); // will automatically search for directory wwwroot - enables images and js
             app.UseSession();
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints => // enable MVC to respond to request
             {
