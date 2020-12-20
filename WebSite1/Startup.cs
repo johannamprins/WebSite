@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,7 +10,7 @@ using WebSite1.Models;
 namespace WebSite1
 {
 
-public class Startup //startup
+    public class Startup //startup
     {
         public IConfiguration Configuration { get; }
 
@@ -25,6 +26,9 @@ public class Startup //startup
 
 
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();
+
             services.AddControllersWithViews(); // we have to add support to MVC 
             // adding our own custom service
             // NB the addscope method means that an instance will be created in each request and
@@ -36,6 +40,7 @@ public class Startup //startup
 
             services.AddHttpContextAccessor();
             services.AddSession();
+            services.AddRazorPages();
 
             //controllers create responses in MVC
 
@@ -63,6 +68,8 @@ public class Startup //startup
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"
                     ); // allows our app to route through the request and return a response
+
+                endpoints.MapRazorPages();
             });
         }
     }
