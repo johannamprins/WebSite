@@ -61,6 +61,7 @@ namespace WebSite1
             app.UseSession();
             app.UseRouting();
             app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints => // enable MVC to respond to request
             {
