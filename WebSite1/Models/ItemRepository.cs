@@ -22,11 +22,13 @@ namespace WebSite1.Models
 
         IEnumerable<Item> IItemRepository.GetItemOnSale => throw new NotImplementedException();
 
-        IEnumerable<Category> IItemRepository.GetAllCategories { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        IEnumerable<Category> IItemRepository.GetAllCategories { get => throw new NotImplementedException(); 
+            set => throw new NotImplementedException(); }
 
         public Item GetItemById(int itemId)
         {
-            return _appDbContext.Items.FirstOrDefault(c => c.ItemId == itemId);
+            return GetAllItem.FirstOrDefault(c => c.ItemId == itemId);
+            //return _appDbContext.Items.FirstOrDefault(c => c.ItemId == itemId);
         }
 
         Item IItemRepository.GetItemById(int itemId)

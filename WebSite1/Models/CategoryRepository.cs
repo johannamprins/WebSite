@@ -15,7 +15,11 @@ namespace WebSite1.Models
             _appDbContext = appDbContext;
         }
 
-        public IEnumerable<Category> GetAllCategories => (IEnumerable<Category>)_appDbContext.Items;
+        public IEnumerable<Category> GetAllCategories => new List<Category>
+        {
+            new Category{CategoryId = 1, CategoryName = "Items number 1", 
+                CategoryDescription = "all the items that are 1"}
+        };
 
         // this property returns all the categories and we can return it as a list
         //new Category{CategoryId = 1, CategoryName = "Items number 1", CategoryDescription = "all the items that are 1"},
