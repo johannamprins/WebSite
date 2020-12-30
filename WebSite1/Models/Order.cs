@@ -45,55 +45,6 @@ namespace WebSite1.Models
 
         public List<OrderDetail> OrderDetails { get; set; }
 
-
-        public int CustomerId
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int CustomerName
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int ProductId
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public float Amount
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public DateTime OrderDate
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public Payment Payment 
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         [BindNever]
         public DateTime OrderPlaced { get; set; }
 

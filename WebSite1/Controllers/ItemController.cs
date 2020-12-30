@@ -1,9 +1,10 @@
-﻿using System;
+﻿using WebSite1.Models;
+using WebSite1.ViewModels;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc;
-using WebSite1.Models;
-using WebSite1.ViewModels;
+using System.Threading.Tasks;
 
 namespace WebSite1.Controllers
 {
@@ -15,24 +16,13 @@ namespace WebSite1.Controllers
         private readonly ICategoryRepository _categoryRepository;
 
 
-        public string category { get; private set; }
-
-
         public ItemController(IItemRepository itemRepository, ICategoryRepository categoryRepository)
         {
             _itemRepository = itemRepository;
             _categoryRepository = categoryRepository;
         }
 
-        public IActionResult List() // builtin type for MVC, returns a view
-        {
-            var itemListViewModel = new ItemListViewModel();
-            itemListViewModel.Item = _itemRepository.GetAllItem;
-            itemListViewModel.CurrentCategory = "Bestseller";
-            return View(itemListViewModel);
-        }
-
-        public IActionResult List(string category)
+        public ViewResult List(string category)
         {
             IEnumerable<Item> items;
             string currentCategory;
@@ -40,7 +30,7 @@ namespace WebSite1.Controllers
             if (string.IsNullOrEmpty(category))
             {
                 items = _itemRepository.GetAllItem.OrderBy(c => c.ItemId);
-                currentCategory = "All cosmetics";
+                currentCategory = "All Item";
             }
             else
             {
@@ -51,11 +41,10 @@ namespace WebSite1.Controllers
             }
 
             return View(new ItemListViewModel
-            {   
+            {
                 Item = items,
                 CurrentCategory = currentCategory
             });
-
         }
 
         public IActionResult Details(int id)
@@ -63,8 +52,10 @@ namespace WebSite1.Controllers
             var item = _itemRepository.GetItemById(id);
             if (item == null)
                 return NotFound();
+
             return View(item);
         }
+
 
         public IActionResult AddToShoppingCart()
         {

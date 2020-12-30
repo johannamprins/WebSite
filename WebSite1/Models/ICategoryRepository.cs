@@ -8,6 +8,5 @@ namespace WebSite1.Models
     public interface ICategoryRepository
     {
         IEnumerable<Category> GetAllCategories { get; }
-        object GetItemOnSale { get;}
     }
 }
