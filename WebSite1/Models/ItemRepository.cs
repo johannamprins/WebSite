@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 namespace WebSite1.Models
@@ -15,25 +13,27 @@ namespace WebSite1.Models
             _appDbContext = appDbContext;
         }
 
-        public IEnumerable<Item> GetAllItem => _appDbContext.Items.Include(c => c.Category);
-        public IEnumerable<Item> GetItemOnSale => _appDbContext.Items.Include(c => c.Category).Where(p => p.IsOnsale);
+        public IEnumerable<Item> GetAllItem
+        {
+            get
+            {
+                return _appDbContext.Items.Include(c => c.Category);
+            }
+        }
 
-        IEnumerable<Item> IItemRepository.GetAllItem => throw new NotImplementedException();
+        public IEnumerable<Item> GetItemOnSale
+        {
+            get
+            {
+                return _appDbContext.Items.Include(c => c.Category).Where(p => p.IsOnSale);
+            }
+        }
 
-        IEnumerable<Item> IItemRepository.GetItemOnSale => throw new NotImplementedException();
-
-        IEnumerable<Category> IItemRepository.GetAllCategories { get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); }
+        public IEnumerable<Category> GetAllCategories { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
         public Item GetItemById(int itemId)
         {
-            return GetAllItem.FirstOrDefault(c => c.ItemId == itemId);
-            //return _appDbContext.Items.FirstOrDefault(c => c.ItemId == itemId);
-        }
-
-        Item IItemRepository.GetItemById(int itemId)
-        {
-            throw new NotImplementedException();
+            return _appDbContext.Items.FirstOrDefault(c => c.ItemId == itemId);
         }
     }
 }
