@@ -6,7 +6,7 @@
 
 <div class="row">
 
-    @foreach (var candy in Model.ItemOnSale)
+    @foreach (var item in Model.ItemOnSale) 
     {
         <partial name="_itemCard" model="item" />
     }

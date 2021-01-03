@@ -6,18 +6,19 @@ namespace WebSite1.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ICategoryRepository _category;
+        private readonly IItemRepository _itemRepository;
 
-        public HomeController(ICategoryRepository category)
+        public HomeController(IItemRepository itemRepository)
         {
-            _category = category;
+            _itemRepository = itemRepository;
         }
         public IActionResult Index()
         {
-            var homeViewModel = new HomeViewModel();
+            var homeViewModel = new HomeViewModel
+            {
+                ItemOnSale = _itemRepository.GetItemOnSale
+            };
 
-            homeViewModel.ItemOnSale.Add(new Item() { Name="Value" }); //(System.Collections.Generic.IEnumerable<Item>)_category.GetItemOnSale
-            
             return View(homeViewModel);
         }
         public IActionResult HomePage()

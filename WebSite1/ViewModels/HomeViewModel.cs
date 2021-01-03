@@ -6,12 +6,10 @@ using WebSite1.Models;
 
 namespace WebSite1.ViewModels
 {
-    public class HomeViewModel
-    {
-        public HomeViewModel()
+        public class HomeViewModel
         {
-            ItemOnSale = new List<Item>();
+           public IEnumerable<Item> ItemOnSale { get; set; }
         }
-        public IList<Item> ItemOnSale {get; set;}
-    }
+
+    
 }
