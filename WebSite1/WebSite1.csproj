@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Pages\ShoppingCart\" />
-    <Folder Include="Views\Home\Account\" />
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
