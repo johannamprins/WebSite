@@ -83,8 +83,7 @@ namespace WebSite1.Models
         }
         public List<ShoppingCartItem> GetShoppingCartItems()
         {
-            return GetShoppingCartItems() ?? (ShoppingCartItems = _appDbContext.ShoppingCartItems.Where
-                    (c => c.ShoppingCartId == ShoppingCartId)
+            return ShoppingCartItems ?? (ShoppingCartItems = _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
                 .Include(s => s.Item)
                 .ToList());
         }
