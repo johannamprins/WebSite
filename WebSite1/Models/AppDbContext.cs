@@ -37,7 +37,7 @@ namespace WebSite1.Models
                 ImageUrl = "https://www.keemia.ee/sites/default/files/styles/page_large/public/2018-04/DDIFFERENCE-Natural-Beauty_group_web_0.jpg?itok=ycw_yg07",
                 ImageThumbnailUrl = "https://www.keemia.ee/sites/default/files/styles/page_large/public/2018-04/DDIFFERENCE-Natural-Beauty_group_web_0.jpg?itok=ycw_yg07",
                 IsInStock = true,
-                IsOnsale = false
+                IsOnSale = false
             });
             modelBuilder.Entity<Item>().HasData(new Item
             {
@@ -49,7 +49,7 @@ namespace WebSite1.Models
                 ImageUrl = "https://www.keemia.ee/sites/default/files/styles/page_large/public/2018-04/DDIFFERENCE-Natural-Beauty_group_web_0.jpg?itok=ycw_yg07",
                 ImageThumbnailUrl = "https://www.keemia.ee/sites/default/files/styles/page_large/public/2018-04/DDIFFERENCE-Natural-Beauty_group_web_0.jpg?itok=ycw_yg07",
                 IsInStock = true,
-                IsOnsale = true
+                IsOnSale = true
             });
             modelBuilder.Entity<Item>().HasData(new Item
             {
@@ -61,7 +61,7 @@ namespace WebSite1.Models
                 ImageUrl = "https://www.keemia.ee/sites/default/files/styles/page_large/public/2018-04/DDIFFERENCE-Natural-Beauty_group_web_0.jpg?itok=ycw_yg07",
                 ImageThumbnailUrl = "https://www.keemia.ee/sites/default/files/styles/page_large/public/2018-04/DDIFFERENCE-Natural-Beauty_group_web_0.jpg?itok=ycw_yg07",
                 IsInStock = true,
-                IsOnsale= false
+                IsOnSale= false
             });
             modelBuilder.Entity<Item>().HasData(new Item
             {
@@ -73,7 +73,7 @@ namespace WebSite1.Models
                 ImageUrl = "https://www.keemia.ee/sites/default/files/styles/page_large/public/2018-04/DDIFFERENCE-Natural-Beauty_group_web_0.jpg?itok=ycw_yg07",
                 ImageThumbnailUrl = "https://www.keemia.ee/sites/default/files/styles/page_large/public/2018-04/DDIFFERENCE-Natural-Beauty_group_web_0.jpg?itok=ycw_yg07",
                 IsInStock = true,
-                IsOnsale= false
+                IsOnSale= false
             });
             
         }
