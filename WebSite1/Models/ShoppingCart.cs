@@ -11,6 +11,7 @@ namespace WebSite1.Models
 {
     public class ShoppingCart
     {
+
         private readonly AppDbContext _appDbContext;
         public string ShoppingCartId { get; set; }
         public List<ShoppingCartItem> ShoppingCartItems { get; set; }
