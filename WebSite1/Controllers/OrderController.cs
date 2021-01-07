@@ -30,6 +30,7 @@ namespace WebSite1.Controllers
         public IActionResult Checkout(Order order)
         {
             _shoppingCart.ShoppingCartItems = _shoppingCart.GetShoppingCartItems();
+
             if (_shoppingCart.ShoppingCartItems.Count == 0)
             {
                 ModelState.AddModelError("", "Your cart is empty");
@@ -47,9 +48,8 @@ namespace WebSite1.Controllers
 
         public IActionResult CheckoutComplete()
         {
-            ViewBag.CheckoutCompleteMessage = "Thank you for your order. Enjoy your products!";
+            ViewBag.CheckoutCompleteMessage = "Thank you for your order. Enjoy your candy";
             return View();
         }
-
     }
 }

@@ -21,9 +21,5 @@ namespace WebSite1.Controllers
 
             return View(homeViewModel);
         }
-        public IActionResult HomePage()
-        {
-            return View();
-        }
     }
 }

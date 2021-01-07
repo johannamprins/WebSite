@@ -9,12 +9,9 @@ using System.Threading.Tasks;
 namespace WebSite1.Controllers
 {
     public class ItemController : Controller
-    //inherits from controller, gives us all functionality of a c
-    //but is still a class
     {
         private readonly IItemRepository _itemRepository;
         private readonly ICategoryRepository _categoryRepository;
-
 
         public ItemController(IItemRepository itemRepository, ICategoryRepository categoryRepository)
         {
@@ -30,14 +27,13 @@ namespace WebSite1.Controllers
             if (string.IsNullOrEmpty(category))
             {
                 items = _itemRepository.GetAllItem.OrderBy(c => c.ItemId);
-                currentCategory = "All Item";
+                currentCategory = "All Cosmetics";
             }
             else
             {
                 items = _itemRepository.GetAllItem.Where(c => c.Category.CategoryName == category);
 
-                currentCategory = _categoryRepository.GetAllCategories.FirstOrDefault(c => c.CategoryName == category)
-                    ?.CategoryName;
+                currentCategory = _categoryRepository.GetAllCategories.FirstOrDefault(c => c.CategoryName == category)?.CategoryName;
             }
 
             return View(new ItemListViewModel
@@ -54,12 +50,6 @@ namespace WebSite1.Controllers
                 return NotFound();
 
             return View(item);
-        }
-
-
-        public IActionResult AddToShoppingCart()
-        {
-            throw new NotImplementedException();
         }
     }
 }
