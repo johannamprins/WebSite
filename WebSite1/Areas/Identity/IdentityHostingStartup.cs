@@ -17,5 +17,6 @@ namespace WebSite1.Areas.Identity
             builder.ConfigureServices((context, services) => {
             });
         }
-    }
+
+       
 }

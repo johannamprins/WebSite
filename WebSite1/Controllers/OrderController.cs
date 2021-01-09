@@ -48,7 +48,7 @@ namespace WebSite1.Controllers
 
         public IActionResult CheckoutComplete()
         {
-            ViewBag.CheckoutCompleteMessage = "Thank you for your order. Enjoy your candy";
+            ViewBag.CheckoutCompleteMessage = "Thank you for your order. Enjoy your products!";
             return View();
         }
     }
