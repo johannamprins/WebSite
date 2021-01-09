@@ -1,14 +1,15 @@
-{
-  "version": "1.0",
-  "defaultProvider": "cdnjs",
-  "libraries": [{
-  "library": "twitter-bootstrap@4.5.3",
-  "destination": "wwwroot/lib/bootstrap/"
-}
-,
-{
-  "library": "jquery@3.5.1",
-  "destination": "wwwroot/lib/jquery/"
-} // library manager basically
-]
-}
+
+  {
+    "version": "1.0",
+    "defaultProvider": "cdnjs",
+    "libraries": [
+      {
+        "library": "jquery@3.4.1",
+        "destination": "wwwroot/lib/jquery/"
+      },
+      {
+        "library": "twitter-bootstrap@3.3.7",
+        "destination": "wwwroot/lib/bootstrap/"
+      }
+    ]
+  
