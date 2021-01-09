@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Item\det.cshtml" />
+    <Content Remove="Views\Item\Details.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,6 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Item\det.cshtml" />
+    <None Include="Views\Item\Details.cshtml" />
   </ItemGroup>
 </Project>
