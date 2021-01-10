@@ -5,14 +5,12 @@
     <ul class="dropdown-menu">
         @foreach (var category in Model)
         {
-            <li>
-                <a asp-controller="Cosmetics" asp-action="List" asp-route-category="@category.CategoryName">@category.CategoryName</a>
-            </li>
-        }
+<li>
+    <a asp-controller="Item" asp-action="List" asp-route-category="@category.CategoryName">@category.CategoryName</a>
+</li>}
         <li class="divider"></li>
         <li>
-            <a asp-controller="Cosmetics" asp-action="List" asp-route-category="">View all Cosmetics</a>
+            <a asp-controller="Item" asp-action="List" asp-route-category="">View all items</a>
         </li>
     </ul>
 </li>
-
