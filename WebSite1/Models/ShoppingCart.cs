@@ -96,12 +96,12 @@ namespace WebSite1.Models
             _appDbContext.SaveChanges();
         }
 
-        public decimal GetShoppingCartTotal()
+        public double GetShoppingCartTotal()
         {
             var total = _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
                 .Select(c => c.Item.Price * c.Amount).Sum();
 
-            return (decimal)total;
+            return total;
         }
 
     }

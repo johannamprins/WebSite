@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using WebSite1.Models;
 using WebSite1.ViewModels;
 
@@ -24,7 +20,7 @@ namespace WebSite1.Components
             var shoppingCartViewModel = new ShoppingCartViewModel
             {
                 ShoppingCart = _shoppingCart,
-                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
+                ShoppingCartTotal = (decimal)_shoppingCart.GetShoppingCartTotal()
             };
 
             return View(shoppingCartViewModel);
