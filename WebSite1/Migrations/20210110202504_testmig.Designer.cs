@@ -10,8 +10,8 @@ using WebSite1.Models;
 namespace WebSite1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210108214047_migration")]
-    partial class migration
+    [Migration("20210110202504_testmig")]
+    partial class testmig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -829,9 +829,6 @@ namespace WebSite1.Migrations
 
                     b.Property<int?>("ItemId")
                         .HasColumnType("int");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("ShoppingCartId")
                         .HasColumnType("nvarchar(max)");
