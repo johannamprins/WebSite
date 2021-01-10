@@ -15,7 +15,7 @@
         @foreach (var item in Model.ShoppingCart.ShoppingCartItems)
         {
 <tr>
-    <td class="text-left"><a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-candyId="@item.Item.ItemId" alt="">Decrease Amount</a></td>
+    <td class="text-left"><a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-itemId="@item.Item.ItemId" alt="">Decrease Amount</a></td>
     <td class="text-center">@item.Amount</td>
     <td class="text-left">@item.Item.Name</td>
     <td class="text-right">@item.Item.Price.ToString("c")</td>

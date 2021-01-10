@@ -54,10 +54,10 @@ namespace WebSite1.Models
             _appDbContext.SaveChanges();
         }
 
-        public int RemoveFromCart(Item candy)
+        public int RemoveFromCart(Item item)
         {
             var shoppingCartItem = _appDbContext.ShoppingCartItems.SingleOrDefault(
-                s => s.Item.ItemId == candy.ItemId && s.ShoppingCartId == ShoppingCartId);
+                s => s.Item.ItemId == item.ItemId && s.ShoppingCartId == ShoppingCartId);
 
             var localAmount = 0;
 
