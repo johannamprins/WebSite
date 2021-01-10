@@ -1,10 +1,8 @@
 ﻿using WebSite1.Models;
 using WebSite1.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace WebSite1.Controllers
 {
