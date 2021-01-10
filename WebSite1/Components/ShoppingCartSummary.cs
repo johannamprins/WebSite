@@ -20,7 +20,7 @@ namespace WebSite1.Components
             var shoppingCartViewModel = new ShoppingCartViewModel
             {
                 ShoppingCart = _shoppingCart,
-                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
+                ShoppingCartTotal = (decimal)_shoppingCart.GetShoppingCartTotal()
             };
 
             return View(shoppingCartViewModel);
