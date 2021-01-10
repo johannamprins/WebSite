@@ -1,6 +1,6 @@
 ﻿body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    background-image: url(https://img.freepik.com/free-photo/white-marble-texture-background-abstract-marble-texture-natural-patterns-design_41389-323.jpg?size=626&ext=jpg);
+    background-image: url('https://freefrontend.com/assets/img/css-background-patterns/css-pattern-3.png');
     background-repeat: repeat;
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -24,12 +24,12 @@
     overflow: hidden;
 }
 
-.caption h4 {
-    white-space: nowrap;
-}
+    .caption h4 {
+        white-space: nowrap;
+    }
 
 .thumbnail img {
-    width: 50%;
+    width: 100%;
 }
 
 .addToCart {
@@ -41,10 +41,10 @@
     padding: 0;
 }
 
-.thumbnail .caption-full {
-    padding: 9px;
-    color: #333;
-}
+    .thumbnail .caption-full {
+        padding: 9px;
+        color: #333;
+    }
 
 footer {
     margin: 50px 0;
@@ -55,8 +55,8 @@ footer {
 }
 
 .navbar-inverse {
-    background-color: #F9C8BE;
-    border-color: #F9C8BE;
+    background-color: #a593c2;
+    border-color: #a593c2;
 }
 
 .nav.navbar-nav.navbar-right li a {
@@ -71,14 +71,14 @@ footer {
 }
 
 .carousel .item {
-    height: 100px;
+    height: 400px;
 }
 
 .item img {
     position: absolute;
     top: 0;
     left: 0;
-    max-height: 200px;
+    min-height: 400px;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
